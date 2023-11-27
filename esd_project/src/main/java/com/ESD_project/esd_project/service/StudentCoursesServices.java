@@ -21,4 +21,8 @@ public class StudentCoursesServices {
     public void addNewStudentCourse(StudentCourses studentCourses){
         studentCoursesRepository.save(studentCourses);
     }
+
+    public List<Object[]> findStudents(Integer employeeId) {
+        return studentCoursesRepository.findStudentsByEmployeeID(employeeId);
+    }
 }

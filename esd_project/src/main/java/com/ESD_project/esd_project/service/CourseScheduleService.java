@@ -21,4 +21,8 @@ public class CourseScheduleService {
     public void addNewCourseSchedule(CourseSchedule courseSchedule){
         courseScheduleRepository.save(courseSchedule);
     }
+
+    public List<Object[]> getCourseName(Integer input){
+        return courseScheduleRepository.getCourseName(input);
+    }
 }

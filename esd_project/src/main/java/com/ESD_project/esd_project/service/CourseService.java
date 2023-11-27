@@ -14,6 +14,12 @@ import java.util.Optional;
 public class CourseService {
     @Autowired
     public final CourseRepository courseRepository;
+//    @Autowired
+//    private CourseRepository courseRepository;
+//
+//    public List<Object[]> getCourseDetailsForEmployeeId(Integer employeeId){
+//        return courseRepository.getCourseDetailsForEmployeeId(employeeId);
+//    }
 
     public CourseService(CourseRepository courseRepository) {
         this.courseRepository = courseRepository;

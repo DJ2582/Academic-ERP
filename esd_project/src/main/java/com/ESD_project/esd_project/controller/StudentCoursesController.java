@@ -4,11 +4,14 @@ import com.ESD_project.esd_project.model.StudentCourses;
 import com.ESD_project.esd_project.service.StudentCoursesServices;
 import org.antlr.v4.runtime.misc.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@CrossOrigin
 @RequestMapping(path="/studentcourses")
 public class StudentCoursesController {
     @Autowired
@@ -21,8 +24,9 @@ public class StudentCoursesController {
     public List<StudentCourses> getStudentCourse(){
         return studentCoursesServices.getStudentCourse();
     }
-    @PostMapping
-    public void registerNewStudentCourse(@RequestBody StudentCourses studentCourses){
-        studentCoursesServices.addNewStudentCourse(studentCourses);
+
+    @GetMapping(path="/all/{employeeId}")
+    public ResponseEntity<List<Object[]>> query2(@PathVariable Integer employeeId){
+        return new ResponseEntity<>(studentCoursesServices.findStudents(employeeId), HttpStatus.OK);
     }
 }

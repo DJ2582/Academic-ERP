@@ -4,6 +4,8 @@ public class LoginMessage {
     String message;
     Boolean status;
 
+    Integer id;
+
     public String getMessage() {
         return message;
     }
@@ -20,19 +22,17 @@ public class LoginMessage {
         this.status = status;
     }
 
-    @Override
-    public String toString() {
-        return "LoginMessage{" +
-                "message='" + message + '\'' +
-                ", status=" + status +
-                '}';
+    public Integer getId() {
+        return id;
     }
 
-    public LoginMessage(String message, Boolean status) {
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public LoginMessage(String message, Boolean status, Integer id) {
         this.message = message;
         this.status = status;
-    }
-
-    public LoginMessage() {
+        this.id = id;
     }
 }

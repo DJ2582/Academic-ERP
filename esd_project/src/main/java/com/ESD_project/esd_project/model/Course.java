@@ -19,6 +19,9 @@ public class Course {
     @JoinColumn(name = "employeeID",nullable = false)
     private Employee employee;
 
+//    @OneToOne
+//    private SpecializationCourse specializationCourse;
+
     @Column(nullable = false,unique = true)
     private Integer courseCode;
     @Column(nullable = false)

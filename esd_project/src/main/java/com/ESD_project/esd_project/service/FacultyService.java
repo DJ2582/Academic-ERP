@@ -28,18 +28,18 @@ public class FacultyService {
             if(isPwdRight){
                 Optional<Employee> admin=adminRepository.findOneByEmailAndPassword(login.getEmail(),passwordFromAdmin);
                 if(admin.isPresent()){
-                    return new LoginMessage("Login Success",true);
+                    return new LoginMessage("Login Success",true,adminFromRequest.getEmployeeId());
                 }
                 else{
-                    return new LoginMessage("Login failed",false);
+                    return new LoginMessage("Login failed",false,0);
                 }
             }
             else {
-                return new LoginMessage("Password not match", false);
+                return new LoginMessage("Password not match", false,0);
             }
         }
         else{
-            return new LoginMessage("Email not exits",false);
+            return new LoginMessage("Email not exits",false,0);
         }
     }
     public void saveAdmin(Employee adminData) {

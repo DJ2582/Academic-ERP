@@ -6,6 +6,7 @@ import com.ESD_project.esd_project.service.CourseService;
 import com.ESD_project.esd_project.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -38,4 +39,17 @@ public class CourseController {
         List<Course> courses = courseService.getCoursesByEmployee(employee);
         return ResponseEntity.ok(courses);
     }
+
+
+
+//    @Autowired
+//    private CourseService courseService;
+//    @GetMapping("/courses")
+//    public String getCoursesForEmployee(Model model) {
+//        Integer employeeId = 1; // Replace with the actual employee ID
+//        List<Object[]> courseDetails = courseService.getCourseDetailsForEmployeeId(employeeId);
+//        model.addAttribute("courseDetails", courseDetails);
+//
+//        return "courses"; // Thymeleaf template name
+//    }
 }
