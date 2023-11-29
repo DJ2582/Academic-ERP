@@ -19,7 +19,7 @@ public class StudentController {
     public List<Student> getStudent(){
         return studentService.getStudent();
     }
-    @PostMapping
+    @PostMapping("/rgst")
     public void registerNewStudent(@RequestBody Student student){
         studentService.addNewStudent(student);
     }

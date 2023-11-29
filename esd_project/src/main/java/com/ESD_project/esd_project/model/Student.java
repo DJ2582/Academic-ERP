@@ -23,7 +23,7 @@ public class Student {
     private Double cgpa;
     private Integer totalCredits;
     private Integer graduationYear;
-    @OneToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(referencedColumnName = "specializationID")
     private Specialization specialization;
 
