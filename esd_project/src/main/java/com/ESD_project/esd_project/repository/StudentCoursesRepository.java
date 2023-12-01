@@ -10,6 +10,7 @@ import java.util.List;
 
 @Repository
 public interface StudentCoursesRepository extends JpaRepository<StudentCourses,Integer> {
-    @Query("select cs.student.firstName,cs.student.lastName,cs.student.rollNumber from StudentCourses cs join cs.student s join cs.course c where cs.course.employee.employeeId=:employeeId")
+//    @Query("select cs.student.firstName,cs.student.lastName,cs.student.rollNumber from StudentCourses cs join cs.student s join cs.course c where cs.course.employee.employeeId=:employeeId")
+@Query("select cs.student.firstName,cs.student.lastName,cs.student.rollNumber from StudentCourses cs join cs.student s join cs.course c where c.courseId=cs.course.courseId and cs.course.courseId=:employeeId")
     List<Object[]> findStudentsByEmployeeID(Integer employeeId);
 }

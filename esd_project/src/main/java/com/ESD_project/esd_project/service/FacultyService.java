@@ -24,7 +24,7 @@ public class FacultyService {
         if(adminFromRequest!=null){
             String passwordFromRequest=login.getPassword();
             String passwordFromAdmin=adminFromRequest.getPassword();
-            Boolean isPwdRight=passwordEncoder.matches(passwordFromRequest,passwordFromAdmin);
+            boolean isPwdRight=passwordEncoder.matches(passwordFromRequest,passwordFromAdmin);
             if(isPwdRight){
                 Optional<Employee> admin=adminRepository.findOneByEmailAndPassword(login.getEmail(),passwordFromAdmin);
                 if(admin.isPresent()){

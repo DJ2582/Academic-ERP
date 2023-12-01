@@ -42,14 +42,16 @@ public class CourseController {
 
 
 
-//    @Autowired
-//    private CourseService courseService;
-//    @GetMapping("/courses")
-//    public String getCoursesForEmployee(Model model) {
-//        Integer employeeId = 1; // Replace with the actual employee ID
-//        List<Object[]> courseDetails = courseService.getCourseDetailsForEmployeeId(employeeId);
-//        model.addAttribute("courseDetails", courseDetails);
-//
-//        return "courses"; // Thymeleaf template name
-//    }
+        //    @Autowired
+        //    private CourseService courseService;
+        //    @GetMapping("/courses")
+        //    public String getCoursesForEmployee(Model model) {
+        //        Integer employeeId = 1; // Replace with the actual employee ID
+        //        List<Object[]> courseDetails = courseService.getCourseDetailsForEmployeeId(employeeId);
+        //        model.addAttribute("courseDetails", courseDetails);
+        //
+        //        return "courses"; // Thymeleaf template name
+        //    }
+
+
 }
