@@ -1,0 +1,78 @@
+
+
+   body {
+    background-color: rgb(120, 152, 154); /* Set your desired background color */
+    font-family: 'Arial', sans-serif; /* Choose a suitable font-family */
+  }
+  
+  .container {
+    margin-top: 100px;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 50px;
+    background-color: #6f5555; /* Set your desired background color for the table */
+  }
+  
+  .table th, .table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #65a83e; /* Set border color */
+  }
+  
+  .table th {
+    background-color: #9fc79f; /* Set your desired background color for table header */
+    color: #313c45; /* Set text color for table header */
+  }
+  
+  .table tbody tr:hover {
+    background-color: #af0e0e; /* Set background color on hover */
+  }
+  
+  .btn-primary {
+    color: white;
+    background-color: #65c057; /* Set your desired button color */
+    border-color: #007bff; /* Set border color for the button */
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3; /* Set button color on hover */
+    border-color: #0056b3; /* Set border color on hover */
+  }
+  
+
+  .login-form {
+    padding: 10px;
+    background-color: rgba(131, 111, 111, 0.468);
+  }
+  
+  .btn-outline-primary {
+    color: #06f7b3;
+    border-color: #96422e;
+  }
+  
+  .btn-outline-primary:hover {
+    color: #fff;
+    background-color: #007bff;
+  }
+  
+  .form-label {
+    font-weight: bold;
+    color: white;
+  }
+  
+  .form-control {
+    border-radius: 10px; /* Add rounded corners to input fields */
+  }
+
+  .viewh{
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+  .fach{
+    text-decoration: underline;
+    font-weight: bold;
+  }
